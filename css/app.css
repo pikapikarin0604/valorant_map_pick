@@ -156,7 +156,10 @@ main { width: calc(100% - 32px); height: calc(100vh - 112px); margin: 16px auto 
 .complete-panel { padding: 10px 20px; text-align: center; }
 .complete-title h2 { margin: 5px 0 15px; }
 .final-results { width: 100%; }
-.final-layout { display: grid; grid-template-columns: clamp(220px, 16vw, 320px) minmax(0, 1fr) clamp(220px, 16vw, 320px); justify-content: center; gap: clamp(12px, 1.5vw, 34px); align-items: start; width: 100%; text-align: left; }
+.final-layout { display: grid; grid-template-columns: clamp(220px, 16vw, 320px) minmax(0, 1fr) clamp(220px, 16vw, 320px); justify-content: center; gap: clamp(12px, 1.5vw, 34px); align-items: start; width: calc(100% - 40px); margin: 0 auto; text-align: left; }
+.final-layout.final-bo1 { max-width: 1250px; }
+.final-layout.final-bo3 { max-width: 1500px; }
+.final-layout.final-bo5 { max-width: 1900px; }
 .final-roster h3 { margin: 0 0 28px; padding: 8px 14px; border: 4px double var(--navy); text-align: center; font-size: 22px; }
 .final-roster-b h3, .final-roster-b li { background: var(--team-b); }
 .final-roster-a h3, .final-roster-a li { background: var(--team-a); }
