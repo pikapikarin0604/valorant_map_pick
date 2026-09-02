@@ -3,7 +3,7 @@
 const FORMATS = {
     bo1: {
         label: "BO1",
-        actions: ["ban", "ban", "ban", "ban", "ban", "ban", "decider"]
+        actions: ["ban", "ban", "ban", "ban", "ban", "pick"]
     },
     bo3: {
         label: "BO3",
@@ -245,6 +245,11 @@ function commitMap(map) {
 }
 
 function openSideDialog(teamKey) {
+    const result = state.results[state.results.length - 1];
+    result.defenderImage = randomSideImage("defender");
+    result.attackerImage = randomSideImage("attacker");
+    document.querySelector('.side-button[value="Defender"] img').src = result.defenderImage;
+    document.querySelector('.side-button[value="Attacker"] img').src = result.attackerImage;
     elements.sideTeamName.textContent = getTeam(teamKey).name;
     elements.sideTeamName.className = `team-${teamKey}-text`;
     elements.sideDialog.returnValue = "";
@@ -371,12 +376,12 @@ function createSideShowcase(result) {
         <article>
             <p class="team-${assignments.defenderKey}-text">${escapeHtml(getTeam(assignments.defenderKey).name)}</p>
             <strong>Defender</strong>
-            <img src="./img/defender_1.jpg" alt="Defender">
+            <img src="${result.defenderImage}" alt="Defender">
         </article>
         <article>
             <p class="team-${assignments.attackerKey}-text">${escapeHtml(getTeam(assignments.attackerKey).name)}</p>
             <strong>Attacker</strong>
-            <img src="./img/attacker_1.jpg" alt="Attacker">
+            <img src="${result.attackerImage}" alt="Attacker">
         </article>`;
     return showcase;
 }
@@ -393,6 +398,11 @@ function ordinal(number) {
     if (number === 2) return "2nd";
     if (number === 3) return "3rd";
     return `${number}th`;
+}
+
+function randomSideImage(side) {
+    const number = Math.floor(Math.random() * 6) + 1;
+    return `./img/${side}_${number}.jpg`;
 }
 
 function renderResults(container, finalView) {
