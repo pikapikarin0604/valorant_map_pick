@@ -1,44 +1,20 @@
 {
   "teams": [
-    {
-      "id": "honki",
-      "name": "今回本気だから。",
-      "members": ["Dora", "むらけん", "けぷ太郎", "はみえる", "ちょす"]
-    },
-    {
-      "id": "alice-milk",
-      "name": "株式会社ありすみるく",
-      "members": ["さくや", "いおりん", "はやゆう", "ましろ", "らる"]
-    },
-    {
-      "id": "sylvanian-families",
-      "name": "Sylvanian Families",
-      "members": ["ずにき", "しゃお", "Nagia", "ぴらふ", "しるばー"]
-    },
-    {
-      "id": "mystug",
-      "name": "MYSTUG",
-      "members": ["Yoru", "taxi", "せいと", "ゆぐ", "むにぽむ"]
-    },
-    {
-      "id": "taseki-rengo",
-      "name": "他責連合",
-      "members": ["kimu", "しのちゃ", "ねるあ", "wing", "ごり"]
-    },
-    {
-      "id": "ten-years-later",
-      "name": "10 years later...",
-      "members": ["okaka", "yuki", "aqua", "めんぼ", "そっぴ"]
-    },
-    {
-      "id": "tomodachi-no-tomodachi",
-      "name": "俺だけ友達の友達",
-      "members": ["むらけん", "ひさめ", "おきてる", "もちゃ", "ちょす"]
-    },
-    {
-      "id": "shukatsu",
-      "name": "就活生と愉快な仲間たち",
-      "members": ["あーりー", "しまりん", "まざちゃり", "かまぼこ", "りべ"]
-    }
+    { "id": "oyatsu-wa-kyukeichu", "name": "おやつは休憩中", "members": ["てんさい", "ゆいりさ", "まなっちくん", "ナイト", "moonknight"] },
+    { "id": "dot-point-dots", "name": "DotPointDots", "members": ["ash", "gaochanggg", "ToAruJupiter", "n4me1s", "shiroha"] },
+    { "id": "org-gaming", "name": "ORG gaming", "members": ["らいむ", "よつば", "もこ", "黒の剣士れんと", "sonson"] },
+    { "id": "last-piece", "name": "LAST PIECE", "members": ["ねるあ", "こなえもん", "つばちゃ", "みさ", "ゴリ"] },
+    { "id": "reisho-nyankees", "name": "冷笑にやにやボーイズ", "members": ["Yukimi", "Mei", "Rukanome", "BanBan", "Waremu"] },
+    { "id": "bokosuka-turns", "name": "ぼこすかりたーんず", "members": ["tapetarope", "ごふぃ", "5YU", "ness", "まぐ"] },
+    { "id": "khd", "name": "KHD", "members": ["Ryusei", "KEN", "孝太郎", "Kento", "Sakura"] },
+    { "id": "mikata-gacha-ssr", "name": "味方ガチャ#SSR", "members": ["Hirosannnnn", "シンディー", "パンパース", "Tasuke", "私がサバだ"] },
+    { "id": "insane-and-devions", "name": "INSANE & DEIYONS", "members": ["kagua", "さびきゅー", "sHir0oo_", "rafiyyy", "Miruty"] },
+    { "id": "osanpo-kishidan", "name": "おさんぽ騎士団", "members": ["ひじきぃ", "TAKOBALL", "めぐみ", "おかき", "KGN"] },
+    { "id": "neko-no-saikyo-card", "name": "猫の最強カード", "members": ["EIL＿PotatoHead", "笹木ころん", "TAKO", "もりるん", "蒼凪ゆと"] },
+    { "id": "gachi-imo-valo", "name": "ガチムチVALO", "members": ["plustiq", "しょうじ", "さや", "mellow", "EMA"] },
+    { "id": "maemirube", "name": "まえみるべ", "members": ["みらい", "Errorcode927", "寿まぐろ", "火乃晴るい", "Becky"] },
+    { "id": "crazy-wakayama", "name": "クレイジー和歌山", "members": ["よっつー", "ゆん", "しん", "すぴ", "aremik"] },
+    { "id": "team-okaka", "name": "ティームおかか", "members": ["okaka", "そっぴ", "yuki", "めと", "あざらし"] },
+    { "id": "uruto-5gc", "name": "うるとらGC", "members": ["るい", "えすてら", "こより", "はな", "うるとらなな"] }
   ]
 }
