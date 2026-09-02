@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VALORANTカスタムマッチ用のMAP BAN・PICKツール">
+    <title>VALORANT Map Pick</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <img src="./img/V_Logotype_Grey_custom.png" alt="VALORANT" class="site-logo">
+        <div>
+            <h1>MAP BAN / PICK</h1>
+            <p id="status-text" aria-live="polite">データを読み込んでいます…</p>
+        </div>
+        <button id="reset-button" class="button button-secondary" type="button" hidden>最初から</button>
+    </header>
+
+    <main>
+        <section id="setup-view" class="panel setup-panel" hidden>
+            <h2>試合設定</h2>
+            <div class="format-picker" role="group" aria-label="試合形式">
+                <button class="format-button" type="button" data-format="bo1">BO1</button>
+                <button class="format-button" type="button" data-format="bo3">BO3</button>
+                <button class="format-button" type="button" data-format="bo5">BO5</button>
+            </div>
+
+            <div class="team-grid">
+                <article class="team-card team-a-card">
+                    <h3>Team A</h3>
+                    <label for="team-a-select">チーム名</label>
+                    <select id="team-a-select">
+                        <option value="">チームを選択</option>
+                    </select>
+                    <ul id="team-a-members" class="member-list"></ul>
+                </article>
+
+                <article class="team-card team-b-card">
+                    <h3>Team B</h3>
+                    <label for="team-b-select">チーム名</label>
+                    <select id="team-b-select">
+                        <option value="">チームを選択</option>
+                    </select>
+                    <ul id="team-b-members" class="member-list"></ul>
+                </article>
+            </div>
+
+            <p id="setup-error" class="error-message" role="alert"></p>
+            <button id="start-button" class="button button-primary" type="button" disabled>NEXT</button>
+        </section>
+
+        <section id="draft-view" hidden>
+            <div class="draft-heading panel">
+                <div>
+                    <span id="format-label" class="format-label"></span>
+                    <h2 id="turn-heading"></h2>
+                    <p id="turn-help"></p>
+                </div>
+                <div id="progress-text" class="progress-text"></div>
+            </div>
+
+            <div id="result-list" class="result-list"></div>
+            <div id="map-list" class="map-list" aria-label="選択可能なマップ"></div>
+        </section>
+
+        <section id="complete-view" class="panel complete-panel" hidden>
+            <p class="eyebrow">DRAFT COMPLETE</p>
+            <h2>MAP BAN / PICK 完了</h2>
+            <div id="final-results" class="final-results"></div>
+            <button id="restart-button" class="button button-primary" type="button">別の試合を始める</button>
+        </section>
+
+        <section id="load-error" class="panel error-panel" hidden>
+            <h2>データを読み込めませんでした</h2>
+            <p id="load-error-detail"></p>
+            <p>ローカルではHTMLを直接開かず、Live ServerなどのHTTPサーバーから開いてください。</p>
+        </section>
+    </main>
+
+    <dialog id="confirm-dialog" class="dialog">
+        <form method="dialog">
+            <p class="eyebrow" id="confirm-action"></p>
+            <h2 id="confirm-map"></h2>
+            <img id="confirm-image" class="dialog-map-image" alt="">
+            <div class="dialog-actions">
+                <button class="button button-secondary" value="cancel">戻る</button>
+                <button id="confirm-button" class="button button-primary" value="confirm">決定</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="side-dialog" class="dialog">
+        <form method="dialog">
+            <p class="eyebrow">STARTING SIDE</p>
+            <h2><span id="side-team-name"></span> の開始サイド</h2>
+            <div class="side-options">
+                <button class="side-button" type="submit" value="Defender">
+                    <img src="./img/defender_1.jpg" alt="Defender">
+                    <span>DEFENDER</span>
+                </button>
+                <button class="side-button" type="submit" value="Attacker">
+                    <img src="./img/attacker_1.jpg" alt="Attacker">
+                    <span>ATTACKER</span>
+                </button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

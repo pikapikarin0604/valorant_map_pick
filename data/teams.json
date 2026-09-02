@@ -1,0 +1,44 @@
+{
+  "teams": [
+    {
+      "id": "honki",
+      "name": "今回本気だから。",
+      "members": ["Dora", "むらけん", "けぷ太郎", "はみえる", "ちょす"]
+    },
+    {
+      "id": "alice-milk",
+      "name": "株式会社ありすみるく",
+      "members": ["さくや", "いおりん", "はやゆう", "ましろ", "らる"]
+    },
+    {
+      "id": "sylvanian-families",
+      "name": "Sylvanian Families",
+      "members": ["ずにき", "しゃお", "Nagia", "ぴらふ", "しるばー"]
+    },
+    {
+      "id": "mystug",
+      "name": "MYSTUG",
+      "members": ["Yoru", "taxi", "せいと", "ゆぐ", "むにぽむ"]
+    },
+    {
+      "id": "taseki-rengo",
+      "name": "他責連合",
+      "members": ["kimu", "しのちゃ", "ねるあ", "wing", "ごり"]
+    },
+    {
+      "id": "ten-years-later",
+      "name": "10 years later...",
+      "members": ["okaka", "yuki", "aqua", "めんぼ", "そっぴ"]
+    },
+    {
+      "id": "tomodachi-no-tomodachi",
+      "name": "俺だけ友達の友達",
+      "members": ["むらけん", "ひさめ", "おきてる", "もちゃ", "ちょす"]
+    },
+    {
+      "id": "shukatsu",
+      "name": "就活生と愉快な仲間たち",
+      "members": ["あーりー", "しまりん", "まざちゃり", "かまぼこ", "りべ"]
+    }
+  ]
+}
