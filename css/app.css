@@ -93,8 +93,8 @@ main { width: min(1500px, calc(100% - 32px)); margin: 34px auto; }
 .team-a-text { color: var(--team-a) !important; }
 .team-b-text { color: var(--team-b) !important; }
 
-.result-list { display: flex; gap: 10px; min-height: 194px; margin: 18px 0; overflow-x: auto; }
-.result-card { flex: 0 0 260px; width: 260px; overflow: hidden; border: 1px solid rgba(236, 232, 225, 0.16); background: var(--panel); }
+.result-list { display: flex; justify-content: center; gap: 10px; min-height: 194px; margin: 18px 0; }
+.result-card { flex: 0 0 262px; width: 262px; overflow: hidden; border: 1px solid rgba(236, 232, 225, 0.16); background: var(--panel); }
 .result-card header { min-height: 61px; padding: 8px 10px; background: #080d12; }
 .result-card header span, .result-card header strong { display: block; font-size: 12px; }
 .result-card header strong { margin-top: 4px; }
@@ -135,10 +135,10 @@ main { width: min(1500px, calc(100% - 32px)); margin: 34px auto; }
 .final-roster-a h3, .final-roster-a li { background: var(--team-a); }
 .final-roster ul { display: grid; gap: 34px; margin: 0; padding: 0; list-style: none; }
 .final-roster li { position: relative; display: flex; align-items: center; justify-content: center; min-height: 76px; padding: 12px; font-size: 22px; font-weight: 800; }
-.final-roster li img { position: absolute; top: 0; left: 0; width: 28px; height: 28px; padding: 5px; background: var(--navy); }
+.final-roster li img { position: absolute; top: 0; left: 0; width: 28px; height: 28px; object-fit: cover; }
 .final-map-area { min-width: 280px; text-align: center; }
 .final-map-list { display: flex; justify-content: center; gap: 14px; padding: 0 0 8px; }
-.final-map-card { flex: 0 0 260px; width: 260px; border: 1px solid var(--gold); background: rgba(0, 0, 0, 0.82); text-align: center; }
+.final-map-card { flex: 0 0 262px; width: 262px; overflow: hidden; border: 1px solid var(--gold); background: rgba(0, 0, 0, 0.82); text-align: center; }
 .final-map-card header { display: grid; min-height: 48px; padding: 5px; border-bottom: 1px solid var(--white); }
 .final-map-card header span { font-size: 13px; font-weight: 800; }
 .final-map-image { display: block; width: 260px; height: 260px; object-fit: cover; }
@@ -151,12 +151,12 @@ main { width: min(1500px, calc(100% - 32px)); margin: 34px auto; }
 .side-showcase p, .side-showcase strong { display: block; margin: 0; padding: 5px; }
 .side-showcase img { display: block; width: 225px; height: 225px; object-fit: cover; }
 .final-champions-logo { display: block; width: 260px; height: 260px; margin: 45px auto 0; object-fit: contain; }
-.final-bo3 .final-map-list { width: 808px; }
-.final-bo5 .final-map-list { width: 1356px; }
+.final-bo3 .final-map-list { width: 814px; }
+.final-bo5 .final-map-list { width: 1366px; }
 .complete-restart { margin-top: 24px; }
 .draft-complete .site-header, .draft-complete .complete-title { display: none; }
 .draft-complete main { width: 100%; margin: 0; }
-.draft-complete { min-width: 2160px; }
+.draft-complete { min-width: 2200px; }
 .draft-complete .complete-panel { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; border: 0; background: transparent; box-shadow: none; }
 .draft-complete .complete-restart { opacity: 0.35; }
 .draft-complete .complete-restart:hover { opacity: 1; }
