@@ -161,6 +161,7 @@ function startDraft() {
     state.firstTeamKey = Math.random() < 0.5 ? "a" : "b";
     state.step = 0;
     state.results = [];
+    document.body.classList.remove("draft-complete");
     elements.setupView.hidden = true;
     elements.draftView.hidden = false;
     elements.resetButton.hidden = false;
@@ -270,10 +271,128 @@ function advanceDraft() {
 }
 
 function finishDraft() {
+    document.body.classList.add("draft-complete");
     elements.draftView.hidden = true;
     elements.completeView.hidden = false;
-    renderResults(elements.finalResults, true);
+    renderFinalResults();
     setStatus(`${FORMATS[state.selectedFormat].label}ドラフト完了`);
+}
+
+function renderFinalResults() {
+    elements.finalResults.replaceChildren();
+
+    const layout = document.createElement("div");
+    layout.className = `final-layout final-${state.selectedFormat}`;
+    let leftKey = "a";
+    let rightKey = "b";
+
+    if (state.selectedFormat === "bo1") {
+        const assignments = getSideAssignments(state.results.find((result) => result.action !== "ban"));
+        leftKey = assignments.defenderKey;
+        rightKey = assignments.attackerKey;
+    }
+
+    layout.append(
+        createFinalRoster(leftKey, getTeam(leftKey)),
+        createFinalMapArea(),
+        createFinalRoster(rightKey, getTeam(rightKey))
+    );
+    elements.finalResults.append(layout);
+}
+
+function createFinalRoster(teamKey, team) {
+    const section = document.createElement("section");
+    section.className = `final-roster final-roster-${teamKey}`;
+
+    const heading = document.createElement("h3");
+    heading.textContent = team.name;
+    const list = document.createElement("ul");
+
+    team.members.forEach((member) => {
+        const item = document.createElement("li");
+        const icon = document.createElement("img");
+        icon.src = "./img/V_Bug_Positive_Navy.png";
+        icon.alt = "";
+        const name = document.createElement("span");
+        name.textContent = member;
+        item.append(icon, name);
+        list.append(item);
+    });
+
+    section.append(heading, list);
+    return section;
+}
+
+function createFinalMapArea() {
+    const playableResults = state.results.filter((result) => result.action !== "ban");
+    const section = document.createElement("section");
+    section.className = "final-map-area";
+
+    const maps = document.createElement("div");
+    maps.className = "final-map-list";
+    playableResults.forEach((result) => maps.append(createFinalMapCard(result)));
+    section.append(maps);
+
+    if (playableResults.length === 1) {
+        section.append(createSideShowcase(playableResults[0]));
+    } else {
+        const logo = document.createElement("img");
+        logo.className = "final-champions-logo";
+        logo.src = "./img/VCT_Champions_icon_allmode.png";
+        logo.alt = "VALORANT Champions";
+        section.append(logo);
+    }
+    return section;
+}
+
+function createFinalMapCard(result) {
+    const card = document.createElement("article");
+    card.className = "final-map-card";
+    const mapNumber = state.results.filter((item) => item.action !== "ban").indexOf(result) + 1;
+    const mapLabel = result.action === "decider" ? "DECIDER" : ordinal(mapNumber);
+    card.innerHTML = `
+        <header>
+            <strong class="${result.action === "decider" ? "" : `team-${result.actorKey}-text`}">${result.action === "decider" ? "DECIDER" : escapeHtml(getTeam(result.actorKey).name)}</strong>
+            <span>${mapLabel} MAP</span>
+        </header>
+        <img class="final-map-image" src="${result.map.image}" alt="${escapeHtml(result.map.name)}">
+        <h3>${escapeHtml(result.map.name)}</h3>
+        <div class="final-side-summary">
+            <p><span class="team-${result.sideTeamKey}-text">${escapeHtml(getTeam(result.sideTeamKey).name)}</span><strong>${result.startingSide}</strong></p>
+        </div>`;
+    return card;
+}
+
+function createSideShowcase(result) {
+    const assignments = getSideAssignments(result);
+    const showcase = document.createElement("div");
+    showcase.className = "side-showcase";
+    showcase.innerHTML = `
+        <article>
+            <p class="team-${assignments.defenderKey}-text">${escapeHtml(getTeam(assignments.defenderKey).name)}</p>
+            <strong>Defender</strong>
+            <img src="./img/defender_1.jpg" alt="Defender">
+        </article>
+        <article>
+            <p class="team-${assignments.attackerKey}-text">${escapeHtml(getTeam(assignments.attackerKey).name)}</p>
+            <strong>Attacker</strong>
+            <img src="./img/attacker_1.jpg" alt="Attacker">
+        </article>`;
+    return showcase;
+}
+
+function getSideAssignments(result) {
+    const otherKey = oppositeTeamKey(result.sideTeamKey);
+    return result.startingSide === "Defender"
+        ? { defenderKey: result.sideTeamKey, attackerKey: otherKey }
+        : { defenderKey: otherKey, attackerKey: result.sideTeamKey };
+}
+
+function ordinal(number) {
+    if (number === 1) return "1st";
+    if (number === 2) return "2nd";
+    if (number === 3) return "3rd";
+    return `${number}th`;
 }
 
 function renderResults(container, finalView) {
@@ -313,6 +432,7 @@ function resetApplication() {
     state.step = 0;
     state.results = [];
     state.pendingMap = null;
+    document.body.classList.remove("draft-complete");
     elements.draftView.hidden = true;
     elements.completeView.hidden = true;
     elements.setupView.hidden = false;
