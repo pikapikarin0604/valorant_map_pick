@@ -1,6 +1,6 @@
 {
   "teams": [
-    { "id": "oyatsu-wa-kyukeichu", "name": "おやつは休憩中", "members": ["てんさい", "ゆいりさ", "まなっちくん", "ナイト", "moonknight"] },
+    { "id": "oyatsu-wa-kyukeichu", "name": "おやつは休憩中", "members": ["tensai", "yuirisa", "まなっちくん", "N1ght", "moonknight"] },
     { "id": "dot-point-dots", "name": "DotPointDots", "members": ["ash", "gaochanggg", "ToAruJupiter", "n4me1s", "shiroha"] },
     { "id": "org-gaming", "name": "ORG gaming", "members": ["らいむ", "よつば", "もこ", "黒の剣士れんと", "sonson"] },
     { "id": "last-piece", "name": "LAST PIECE", "members": ["ねるあ", "こなえもん", "つばちゃ", "みさ", "ゴリ"] },
@@ -15,6 +15,6 @@
     { "id": "maemirube", "name": "まえみるべ", "members": ["みらい", "Errorcode927", "寿まぐろ", "火乃晴るい", "Becky"] },
     { "id": "crazy-wakayama", "name": "クレイジー和歌山", "members": ["よっつー", "ゆん", "しん", "すぴ", "aremik"] },
     { "id": "team-okaka", "name": "ティームおかか", "members": ["okaka", "そっぴ", "yuki", "めと", "あざらし"] },
-    { "id": "uruto-5gc", "name": "うるとらGC", "members": ["るい", "えすてら", "こより", "はな", "うるとらなな"] }
+    { "id": "uruto-5gc", "name": "うるとらGC", "members": ["rui", "estella", "koyori", "hqna", "うるとらなな"] }
   ]
 }

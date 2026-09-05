@@ -1,16 +1,82 @@
 {
-  "maps": [
-    { "id": "haven", "name": "Haven", "image": "./img/map/haven.jpg", "enabled": true },
-    { "id": "bind", "name": "Bind", "image": "./img/map/bind.jpg", "enabled": true },
-    { "id": "split", "name": "Split", "image": "./img/map/split.jpg", "enabled": true },
-    { "id": "abyss", "name": "Abyss", "image": "./img/map/abyss.jpg", "enabled": true },
-    { "id": "pearl", "name": "Pearl", "image": "./img/map/pearl.jpg", "enabled": true },
-    { "id": "sunset", "name": "Sunset", "image": "./img/map/sunset.jpg", "enabled": true },
-    { "id": "corrode", "name": "Corrode", "image": "./img/map/corrode.jpg", "enabled": true },
-    { "id": "ascent", "name": "Ascent", "image": "./img/map/ascent.jpg", "enabled": false },
-    { "id": "fracture", "name": "Fracture", "image": "./img/map/fracture.jpg", "enabled": false },
-    { "id": "icebox", "name": "Icebox", "image": "./img/map/icebox.jpg", "enabled": false },
-    { "id": "breeze", "name": "Breeze", "image": "./img/map/breeze.jpg", "enabled": false },
-    { "id": "lotus", "name": "Lotus", "image": "./img/map/lotus.jpg", "enabled": false }
-  ]
+    "maps": [
+        {
+            "id": "haven",
+            "name": "Haven",
+            "image": "./img/map/haven.jpg",
+            "enabled": true
+        },
+        {
+            "id": "bind",
+            "name": "Bind",
+            "image": "./img/map/bind.jpg",
+            "enabled": false
+        },
+        {
+            "id": "split",
+            "name": "Split",
+            "image": "./img/map/split.jpg",
+            "enabled": true
+        },
+        {
+            "id": "abyss",
+            "name": "Abyss",
+            "image": "./img/map/abyss.jpg",
+            "enabled": true
+        },
+        {
+            "id": "pearl",
+            "name": "Pearl",
+            "image": "./img/map/pearl.jpg",
+            "enabled": false
+        },
+        {
+            "id": "sunset",
+            "name": "Sunset",
+            "image": "./img/map/sunset.jpg",
+            "enabled": true
+        },
+        {
+            "id": "corrode",
+            "name": "Corrode",
+            "image": "./img/map/corrode.jpg",
+            "enabled": false
+        },
+        {
+            "id": "ascent",
+            "name": "Ascent",
+            "image": "./img/map/ascent.jpg",
+            "enabled": true
+        },
+        {
+            "id": "fracture",
+            "name": "Fracture",
+            "image": "./img/map/fracture.jpg",
+            "enabled": false
+        },
+        {
+            "id": "icebox",
+            "name": "Icebox",
+            "image": "./img/map/icebox.jpg",
+            "enabled": false
+        },
+        {
+            "id": "breeze",
+            "name": "Breeze",
+            "image": "./img/map/breeze.jpg",
+            "enabled": false
+        },
+        {
+            "id": "lotus",
+            "name": "Lotus",
+            "image": "./img/map/lotus.jpg",
+            "enabled": true
+        },
+        {
+            "id": "summit",
+            "name": "Summit",
+            "image": "./img/map/summit.jpg",
+            "enabled": true
+        }
+    ]
 }
